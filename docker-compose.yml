@@ -1,0 +1,11 @@
+services:
+  jupyter:
+    image: jupyter/scipy-notebook:latest
+    container_name: egt307_jupyter_notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebook:/home/jovyan/work/notebook
+      - ./data:/home/jovyan/work/data
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
