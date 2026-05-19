@@ -2,10 +2,11 @@ services:
   jupyter:
     image: jupyter/scipy-notebook:latest
     container_name: egt307_jupyter_notebook
+    working_dir: /work
     ports:
       - "8888:8888"
     volumes:
-      - ./notebook:/home/jovyan/work/notebook
-      - ./data:/home/jovyan/work/data
+      - ./notebook:/work/notebook
+      - ./data:/work/data
     environment:
       - JUPYTER_ENABLE_LAB=yes
