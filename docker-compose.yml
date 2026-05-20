@@ -7,6 +7,7 @@ services:
       - "8888:8888"
     volumes:
       - ./notebook:/work/notebook
+      - ./src:/work/src
       - ./data:/work/data
     environment:
       - JUPYTER_ENABLE_LAB=yes
